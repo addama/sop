@@ -26,13 +26,21 @@ Git is an industry-standard protocol for interacting with distributed (or hosted
 
 Github is a hosting service provider that hosts Git repositories on a centrally located server that is accessible from the internet. This enables multiple people to work on, download, and view repositories with a centrally located source of truth rather than a distributed "web of truth" that must be viewed as a whole to understand all of the changes and status of a system.
 
-1.4. Releases
+1.3.1. Use of Github
+
+1.3.1.1. Issues
+
+1.3.1.2. Projects
+
+1.3.1.3. Labels
+
+1.3.1.4. Releases
 
 Releases are stable snapshots of the software, and its peripherals as required, that may include new functionality, bug fixes, and other changes deemed necessary by Xtract Solutions. 
 
 Releases are represented by a Release Number, which logically encodes the amount and intensity of the changes made since the last release. Release numbering follows the SemVer 2.0.0 numbering scheme as is applicable and strategically relevant.
 
-1.4.1. Semantic Versioning Number
+1.3.1.4.1. Semantic Versioning Number
 
 As described on the SemVer website, version numbers follow this pattern:
 
@@ -105,7 +113,7 @@ The Product Owner or their designee endeavors to refine the Product Backlog Item
 
 This is an on-going process that happens independently of the development process described herein.
 
-4.2. Execute Sprints 
+4.2. Sprint Execution 
 
 Sprints are executed sequentially, and immediately following the last Sprint, unless other scheduling or strategic needs dictate otherwise. Sprints are comprised of four meetings, and the flow of a Sprint follows this pattern whether the work done is successful or not.
 
@@ -115,7 +123,7 @@ During the Sprint, all Sprint Backlog Items will be completed, documented as nec
 
 The output of a Sprint is a complete and releasable iteration of the product. If any Sprint Backlog Items remain incomplete by the end of the Sprint, they are put back into the Product Backlog and may be addressed in future Sprints.
 
-4.2.1. Scrum Meetings and Sprint Structure
+4.2.1. Sprint Structure
 
 4.2.1.1. Sprint Planning Meeting
 
@@ -145,23 +153,49 @@ The Sprint Review attendees then may choose to discuss plans for what will go in
 
 4.2.1.5. Sprint Retrospective Meeting
 
-The Sprint Retrospective meeting is a Scrum meeting that is timeboxed to at most one hour, plus 30 minutes per week that the Sprint ran.
+The Sprint Retrospective meeting is a Scrum meeting that is timeboxed to at most one hour, plus 30 minutes per week that the Sprint ran. The meeting is held after the Sprint Review Meeting and before beginning the next Sprint with the Sprint Planning meeting.
 
 During the Sprint Retrospective meeting, the Development Team, Product Owner, and Scrum Master discuss how the work went during the Sprint, hoping to uncover and address any deficiencies, as well as highlighting good work and innovative ideas. 
 
-4.3. Release Candidate
+4.3. Github Issue Management
+
+
+
+4.4. Release Candidate
 
 5. Glossary
 
 timeboxed
 
-# Process
 
-## Pre
 
-## Scrum
-
-## Post
-
-## Release
+Add issues to the NEEDS PROJECT label, which serves as the Product Backlog
+Product Owner refines and orders the Product Backlog
+Conduct Sprint
+	Conduct Sprint Planning meeting
+		Make a new Project for the Sprint ("Sprint #")
+		Move issues into the Sprint Project as a result of/during the Sprint Planning Meeting
+		Add all Sprint issues to the To Do column
+	Assign issues to Developers
+	Conduct/merge work in next_release branch
+	Conduct Daily Scrum meetings
+	Move issues to Doing when started
+	Move issues to Done when complete
+	Assign Done issues to QA or Developers for validation
+	Move validated issues to Validated
+	Conduct Sprint Review meeting
+	Merge next_release branch into master branch
+	Conduct Sprint Retrospective meeting
+Determine if a release is necessary (PO)
+	Assign version number
+		Using semver.org
+	Build release candidate in Github
+	Determine which clients will receive the release
+	Create Release Validation procedure for each client ("Validation" label)
+	Create database for that client
+	Conduct relevant migrations on client databases
+	Conduct client-specific validation Sprint (?) (separate from Sprints?)
+	Send email to clients and employees to announce the release
+	Schedule time with clients to install and train as necessary
+Repeat
 
