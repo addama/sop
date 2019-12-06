@@ -1,4 +1,4 @@
-# Development Procedure {#top}
+# Development Standards of Practice {#top}
 
 # Product Backlog Item Generation {#product-backlog-item-generation}
 Product Backlog Items are represented by Github Issues with the “Needs Project” label, or other labels and identification methods as agreed to by the Scrum Team. Product Backlog Items may originate from client feedback/request or internally, and may represent bug fixes, new features, or other changes to the product or its architecture.
@@ -13,7 +13,7 @@ Product Backlog Item generation and refinement is an on-going process that is in
 1. The Lead Developer or their delegate makes a new Github Project for the Sprint named "Sprint #" with the Sprint number in the appropriate repository
 2. The Development Team moves Issues into the Sprint Project in the "To Do" column as a result of/during the Sprint Planning meeting. These Issues will make up the Sprint Backlog
 
-## Work through Sprint Backlog {#sprint-work}
+## Work Through Sprint Backlog {#sprint-work}
 1. The Lead Developer or their delegate creates a new next_release branch or merges master into an next_release branch. All new work for the Sprint is done in this next_release branch
 2. The Development Team assigns Sprint Issues to Developers. The Development Team self-organizes and self-determines who gets what issues to work on. Issues may be unassigned and/or reassigned at any time at their discretion
 3. The Development Team conducts Daily Scrum meetings
@@ -24,12 +24,12 @@ Product Backlog Item generation and refinement is an on-going process that is in
    4. Move validated issues to the "Validated" column
    5. Move issues that failed validation back to the "To Do" column
 
-## Finish out the Sprint {#finish-sprint}
+## Finish Out the Sprint {#finish-sprint}
 1. The Scrum Team conducts a Sprint Review meeting
 2. The Lead Developer or their delegate merges the next_release branch into the current_version branch
 3. The Scrum Team conducts a Sprint Retrospective meeting
 
-# Determine if a release is necessary {#release}
+# Determine If a Release is Necessary {#release}
 1. The Director of Development or their delegate assign a version number to the proposed release using the Semantic Versioning format as described by semver.org, as appropriate to the situation
 2. The Lead Developer or their delegate builds a Release Candidate in Github from the current_version branch
 3. Quality Assurance and the Developers conduct release validation. Release Validation may be tracked either as Issues in the next Sprint, or parallel to the  Sprint depending on resources and strategy
