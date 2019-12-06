@@ -16,7 +16,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	
 }
 
 header {
@@ -136,11 +135,6 @@ pre.highlight {
 	margin-bottom: 1em;
 }
 
-#readingTimeContainer {
-	float: right;
-	font-style: italic;
-}
-
 table:not(.rouge-table) {
 	min-width: 33%;
 	border-collapse: collapse;
@@ -165,12 +159,6 @@ table:not(.rouge-table) td {
 	padding: 5px 1em;
 	border-left: 1px solid #eee;
 	border-right: 1px solid #eee;
-}
-
-#categoryContainer {
-	margin-top: 1em;
-	text-align: right;
-	font-size: smaller;
 }
 
 img {
