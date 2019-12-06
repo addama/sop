@@ -13,33 +13,36 @@ Product Backlog Item generation and refinement is an on-going process that is in
 1. The Lead Developer or their delegate makes a new Github Project for the Sprint named "Sprint #" with the Sprint number in the appropriate repository
 2. The Development Team moves Issues into the Sprint Project in the "To Do" column as a result of/during the Sprint Planning meeting. These Issues will make up the Sprint Backlog
 
-## Work Through Sprint Backlog {#sprint-work}
-1. The Lead Developer or their delegate creates a new next_release branch or merges master into an next_release branch. All new work for the Sprint is done in this next_release branch
+## Work Through the Sprint Backlog {#sprint-work}
+1. The Lead Developer or their delegate creates a new `next_release` branch or merges the `master` branch into an existing `next_release` branch. All new work for the Sprint is done in this `next_release` branch
 2. The Development Team assigns Sprint Issues to Developers. The Development Team self-organizes and self-determines who gets what issues to work on. Issues may be unassigned and/or reassigned at any time at their discretion
 3. The Development Team conducts Daily Scrum meetings
 4. The Developers move Issues through the Github Project columns
    1. Move Issues to the "Doing" column when started
    2. Move Issues to the "Done" column when complete
-   3. Assign "Done" Issues to QA or impartial Developers for validation. Validation at this stage is a unit test to ensure that the changes made perform as expected by redressing the original Issue and determining if the problem has been solved or feature has been added as described
+   3. Assign "Done" Issues to Quality Assurance or impartial Developers for validation. Validation at this stage is a unit test to ensure that the changes made perform as expected by redressing the original Issue and determining if the problem has been solved or feature has been added as described. The process and results of this testing is recorded in the Issue.
    4. Move validated issues to the "Validated" column
-   5. Move issues that failed validation back to the "To Do" column
+   5. Move issues that failed validation back to the "To Do" column and reassign the original Development Team member
 
-## Finish Out the Sprint {#finish-sprint}
+## Finish Out the Sprint {#sprint-finish}
 1. The Scrum Team conducts a Sprint Review meeting
-2. The Lead Developer or their delegate merges the next_release branch into the current_version branch
+2. The Lead Developer or their delegate merges the `next_release` branch into the `current_version` branch
 3. The Scrum Team conducts a Sprint Retrospective meeting
 
 # Determine If a Release is Necessary {#release}
-1. The Director of Development or their delegate assign a version number to the proposed release using the Semantic Versioning format as described by semver.org, as appropriate to the situation
-2. The Lead Developer or their delegate builds a Release Candidate in Github from the current_version branch
-3. Quality Assurance and the Developers conduct release validation. Release Validation may be tracked either as Issues in the next Sprint, or parallel to the  Sprint depending on resources and strategy
+After the completion of any Sprint, the Product Owner may determine that enough features or fixes have been implemented into the `current_version` branch to warrant a release, which can be deployed to clients. This determination happens at the Product Owner's discretion. If no release is necessary, the Sprint process as described above continues as normal.
+
+1. The Product Owner determines that a release is necessary
+2. The Director of Development or their delegate assigns a version number to the proposed release using the Semantic Versioning format as described by semver.org, as appropriate to the situation
+3. The Lead Developer or their delegate builds a Release Candidate in Github from the `current_version` branch
+4. Quality Assurance and the Developers conduct release validation. Release Validation may be tracked either as Issues in the next Sprint, or parallel to the Sprint depending on resources and strategy
    1. The Director of Development or their delegate creates or reuses Release Validation procedures for representative client types, which include but are not limited to: ENT, BCA, and Baker
    2. The Lead Developer or their delegate procures or updates a database for each representative client type and makes them available for use
    3. The Lead Developer or their delegate conducts relevant migrations on each database
    4. Quality Assurance conducts validation on each database based on Release Validation procedures. They may assign validation tasks or procedures to Development Team members as needed
-4. Director of Development or their delegate signs off on validation stating that all Release Validation procedures were completed satisfactorily and that the release is stable
-5. The Lead Developer or their delegate merges the current_version into master branch
-6. The Director of Development or their delegate notifies affected clients and internal employees of the release
+5. Director of Development or their delegate signs off on validation stating that all Release Validation procedures were completed satisfactorily and that the release is stable
+6. The Lead Developer or their delegate merges the `current_version` into the `master` branch
+7. The Director of Development or their delegate notifies affected clients and internal employees of the release
 
 # Expectation of Change {#expectation-of-change}
 The procedure described herein is an Agile process, and as such there is an expectation of change and adaptation. At any time during the process, better or different processes, tools, methods, etc, may be discovered and adopted by the Scrum Team at their discretion.
