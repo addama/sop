@@ -60,11 +60,11 @@ The procedure described herein accounts for the majority of development, but str
 In the event that a bug or other issue occurs in production and is deemed as being detrimental to client operations, patient health and safety, or Xtract Solutions data integrity, special dispensation is granted to the Product Owner to choose to do the following:
 
 * Add and prioritize new Issues related to the problem into the current Sprint Backlog
-* Truncate the current Sprint, intending for the shortend Sprint to still be stable and releasable, in order to start a new Sprint with the new Issue(s)
+* Truncate the current Sprint, intending for the shortened Sprint to still be stable and releasable, in order to start a new Sprint with the new Issue(s)
 
 If the Product Owner deems the problem worthy of these avenues, they must call a meeting with the Scrum Team to express this and discuss the impacts. 
 
-If the current Sprint is truncated so a new Sprint can start, the Product Owner and Development Team must discuss the current state of the Sprint and the in-progress Sprint Backlog Items. The Development Team must be allowed to finish any in-progress Sprint Backlog Items such that the stability and releaseability of the Sprint is maintained even though it is ending early. The Scrum Team then immediately conducts a Sprint Review meeting and continues the process as normal from that point. The Lead Developer or their delegate will edit the description of the existing Sprint Project to link to the new Issue(s) and/or Project with a statement that the Sprint was truncated early.
+If the current Sprint is truncated so a new Sprint can start, the Product Owner and Development Team must discuss the current state of the Sprint and the in-progress Sprint Backlog Items. The Development Team must be allowed to finish any in-progress Sprint Backlog Items such that the stability and releaseability of the Sprint is maintained even though it is ending early. The Scrum Team then immediately conducts a Sprint Review meeting and continues the process as normal from that point. The Lead Developer or their delegate will edit the description of the existing Sprint Project to link to the new Issue(s) and/or Sprint Project with a statement that the Sprint was truncated early.
 
 Any new Issues to be added, regardless of whether the Sprint is truncated or not, must include in their text a notation stating the following:
 
@@ -203,3 +203,4 @@ Github Wikis are a documentation resource provided by Github. They function simi
 * [Semantic Versioning Format](http://semver.org)
 * [Agile Manifesto](http://agilemanifesto.org/)
 * [Scrum.org, What is Scrum?](https://www.scrum.org/resources/what-is-scrum)
+* [Getting started with Github](https://help.github.com/en/github/getting-started-with-github)
