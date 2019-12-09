@@ -1,5 +1,12 @@
 # Development Standards of Practice {#top}
 
+Version 1.0.0
+
+# Purpose
+This document describes the software development process for Xtract Solutions as it pertains to the development team. The process described is based on Scrum, an Agile framework, and covers planning/storing Product Backlog Items, the work being done during Sprints, as well as the process for releasing stable iterations of the projects we work on. 
+
+This process does not currently prescribe process or methods for selling, implementing, training for, or maintaining said releases. Any member or title not specifically mentioned is not covered by this process, unless selected as a delegate for relevant process steps.
+
 # Product Backlog Item Generation {#product-backlog-item-generation}
 Product Backlog Items are represented by Github Issues with the “Needs Project” label, or other labels and identification methods as agreed to by the Scrum Team. Product Backlog Items may originate from client feedback/request or internally, and may represent bug fixes, new features, or other changes to the product or its architecture.
 
@@ -11,7 +18,8 @@ Product Backlog Item generation and refinement is an on-going process that is in
 
 ## Conduct Sprint Planning meeting {#sprint-planning}
 1. The Lead Developer or their delegate makes a new Github Project for the Sprint named "Sprint #" with the Sprint number in the appropriate repository
-2. The Development Team moves Issues into the Sprint Project in the "To Do" column as a result of/during the Sprint Planning meeting. These Issues will make up the Sprint Backlog
+2. The Scrum Team conducts the Sprint Planning meeting
+3. The Development Team moves Issues into the Sprint Project in the "To Do" column as a result of/during the Sprint Planning meeting. These Issues will make up the Sprint Backlog
 
 ## Work Through the Sprint Backlog {#sprint-work}
 1. The Lead Developer or their delegate creates a new `next_release` branch or merges the `master` branch into an existing `next_release` branch. All new work for the Sprint is done in this `next_release` branch
@@ -20,9 +28,9 @@ Product Backlog Item generation and refinement is an on-going process that is in
 4. The Developers move Issues through the Github Project columns
    1. Move Issues to the "Doing" column when started
    2. Move Issues to the "Done" column when complete
-   3. Assign "Done" Issues to Quality Assurance or impartial Developers for validation. Validation at this stage is a unit test to ensure that the changes made perform as expected by redressing the original Issue and determining if the problem has been solved or feature has been added as described. The process and results of this testing is recorded in the Issue.
+   3. Assign "Done" Issues to Quality Assurance or impartial Developers for validation. Validation at this stage is a unit test to ensure that the changes made perform as expected by redressing the original Issue and determining if the problem has been solved or feature has been added as described. The process and results of this testing is recorded in the Issue with objective data captures, screenshots, and other output whenever possible
    4. Move validated issues to the "Validated" column
-   5. Move issues that failed validation back to the "To Do" column and reassign the original Development Team member
+   5. Move issues that failed validation back to the "To Do" column and reassign the original Development Team member. That Development Team member then resumes work as per the process described above
 
 ## Finish Out the Sprint {#sprint-finish}
 1. The Scrum Team conducts a Sprint Review meeting
@@ -40,19 +48,41 @@ After the completion of any Sprint, the Product Owner may determine that enough 
    2. The Lead Developer or their delegate procures or updates a database for each representative client type and makes them available for use
    3. The Lead Developer or their delegate conducts relevant migrations on each database
    4. Quality Assurance conducts validation on each database based on Release Validation procedures. They may assign validation tasks or procedures to Development Team members as needed
-5. Director of Development or their delegate signs off on validation stating that all Release Validation procedures were completed satisfactorily and that the release is stable
-6. The Lead Developer or their delegate merges the `current_version` into the `master` branch
+5. Director of Development or their delegate signs off on validation stating that all Release Validation procedures were completed satisfactorily and that the release is stable 
+   * This sign-off is represented by a comment on each Release Validation Issue with the following text as appropriate to the situation: "I have reviewed the project and approve these changes for release," followed by the date and their typed name
+6. The Lead Developer or their delegate merges the `current_version` branch into the `master` branch
 7. The Director of Development or their delegate notifies affected clients and internal employees of the release
+
+# Special Projects {#specal-projects}
+The procedure described herein accounts for the majority of development, but strategy or business needs may dictate parallel or separate development in the form of Special Projects. These projects lie outside the described Scrum process sections, but adhere to the larger development release process as dictated by the situation and resources being used.
+
+# Special Dispensation for Emergency Fixes {#emergency-fix}
+In the event that a bug or other issue occurs in production and is deemed as being detrimental to client operations, patient health and safety, or Xtract Solutions data integrity, special dispensation is granted to the Product Owner to choose to do the following:
+
+* Add and prioritize new Issues related to the problem into the current Sprint Backlog
+* Truncate the current Sprint, if possible while still being a stable and releasable output, in order to start a new Sprint with the new Issue(s)
+
+If the Product Owner deems the problem worthy of these avenues, they must call a meeting with the Scrum Team to express this and discuss the impacts. 
+
+If the current Sprint is truncated so a new Sprint can start, the Product Owner and Development Team must discuss the current state of the Sprint and the in-progress Sprint Backlog Items. The Development Team must be allowed to finish any in-progress Sprint Backlog Items such that the stability and releaseability of the Sprint is maintained even though it is ending early. The Scrum Team then immediately conducts a Sprint Review meeting and continues the process as normal from that point. The Lead Developer or their delegate will edit the description of the existing Sprint Github Project to link to the new Issue(s) with a statement that the Sprint was truncated early.
+
+Any new Issues to be added, regardless of whether the Sprint is truncated or not, must include in their text a notation stating the following:
+
+* That this Issue is an "Emergency Fix"
+* The date the original production Issue was discovered
+* The client(s) and/or systems affected
+* A description of the event, using captured data, screenshots, and other output or observations whenever posible
+* Any additional information, particularly related to possible solutions
 
 # Expectation of Change {#expectation-of-change}
 The procedure described herein is an Agile process, and as such there is an expectation of change and adaptation. At any time during the process, better or different processes, tools, methods, etc, may be discovered and adopted by the Scrum Team at their discretion.
 
 The Director of Development will endeavor to update this document to reflect changes to the process at least quarterly, or as dictated by scheduling or strategic needs.
 
-# Special Projects {#specal-projects}
-The procedure described herein accounts for the majority of development, but strategy or business needs may dictate parallel or separate development in the form of Special Projects. These projects lie outside the described Scrum process, but adhere to the larger Development process and its release schedule.
+# Training
+To maintain knowledge and compliance with the procedures listed above, all development team members must review this document annually within the first quarter of the calendar year. Acknowledgement of this retraining is signified by sending an email to the Director of Development or their delegate. 
 
-# Roles {#roles}
+# Appendix A: Roles {#roles}
 
 ## Organizational Roles {#org-roles}
 
@@ -92,7 +122,7 @@ The Scrum Master oversees the execution, adherence, and efficiency of the Scrum 
 
 The Scrum Master officiates or attends Scrum meetings to ensure that they remain within their timebox, and are both positive and productive.
 
-# Scrum Overview {#scrum}
+# Appendix B: Scrum Overview {#scrum}
 Scrum is an Agile framework. Agile is a methodology, an abstract mindset, that specifically emphasizes continuous improvement, collaboration, and efficiency in software development. This can be actualized, practically, by valuing worker skills and well-being over deadlines, shorter more manageable release cycles, and providing avenues for change rather than remaining rigid.
 
 While Agile is an abstract description of how things should be done, Scrum is a concrete implementation of those values into an actionable process. 
@@ -142,8 +172,33 @@ The Sprint Retrospective meeting is timeboxed to at most one hour, plus 30 minut
 
 During the Sprint Retrospective meeting, the Scrum Team discusses how the work went during the Sprint, hoping to uncover and address any deficiencies, as well as highlighting good work and innovative ideas. 
 
-# Resources and References {#resources}
+# Appendix C: Related Technologies and Processes
 
+## Github
+Github is a web service that provides centralized hosting and user management for Git Repositories, Projects, Issues, Releases, and other Git concepts. Git is a protocol for creating and maintaining peer-based repositories of code that can be simultaneously worked on by multiple people and teams in a well-ordered and conflict-free way. Repositories are often restricted to only selected users, or users belonging to an organization, but may also be made public at the discretion of their creator.
+
+Central to Git and Github is version control. Any change to any Repository, Issue, Project, Wiki, Release, comment, or file is tracked and saved into perpetuity. Information about the user who made the change, the date and time the change was made, and the exact contents of their change(s) are tracked.
+
+Changes to the code are made in Commits, which represent some amount of change to the code or its files, and are subject to version control. Commits are created at the discretion of the Developer, and can be pushed singly or in groups back into the repository for others to review and/or accept into the codebase. This allows for potential conflicts between pieces of code or repository structure to be obvious, trackable, and repealable.
+
+### Issues
+Github Issues are a way to report and document changes, requests, observations, and bugs in a Repository. Issues are subject to version control and may contain mixed media attachments as well as text. Users can comment on Issues to discuss the contents or contribute new information or media. Issues may be included in a Project or given labels to organize them.
+
+### Projects
+Github Projects represent a desired set of changes or future state to a Repository. The contents and intent of the Project are determined by its contributors, and is used as a method to organize work toward a common goal. Projects can have Issues assigned to them, and can be restricted to certain users.
+
+### Repositories
+Github Repositories are centralized areas where related code is kept. Repositories often store the entire structure and files of an application, for example. As the top-level physical organizational element in Github, it contains not only the files, but Projects, Issues, Wikis, and other features and elements.
+
+Repositories may be restricted to certain users, and made private or public.  
+
+### Releases
+Github Releases represent a stable state of the code in a Repository that is intended for use or distribution. Releases are often heavily scrutinized through a Quality Assurance process prior to deployment to ensure that the final product is verified safe, stable, and functional.
+
+### Wiki
+Github Wikis are a documentation resource provided by Github. They function similarly to other wikis (e.g. Wikipedia) in that their contents are organized into pages that may link to one another, and often are categorized for better organization. Wikis often share the same permissions as the Repository they are attached to, and are subject to version control.
+
+# Appendix D: Resources and References {#resources}
 * [Xtract Solutions Documentation Site](http://xtractsolutions.github.io)
 * [Semantic Versioning Format](http://semver.org)
 * [Agile Manifesto](http://agilemanifesto.org/)
