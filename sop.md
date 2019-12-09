@@ -16,7 +16,7 @@ Product Backlog Item generation and refinement is an on-going process that is in
 
 # Development Sprint Process {#development-process}
 
-## Conduct Sprint Planning meeting {#sprint-planning}
+## Begin the Sprint {#sprint-begin}
 1. The Lead Developer or their delegate makes a new Github Project for the Sprint named "Sprint #" with the Sprint number in the appropriate repository
 2. The Scrum Team conducts the Sprint Planning meeting
 3. The Development Team moves Issues into the Sprint Project in the "To Do" column as a result of/during the Sprint Planning meeting. These Issues will make up the Sprint Backlog
@@ -32,7 +32,7 @@ Product Backlog Item generation and refinement is an on-going process that is in
    4. Move validated issues to the "Validated" column
    5. Move issues that failed validation back to the "To Do" column and reassign the original Development Team member. That Development Team member then resumes work as per the process described above
 
-## Finish Out the Sprint {#sprint-finish}
+## Finish the Sprint {#sprint-finish}
 1. The Scrum Team conducts a Sprint Review meeting
 2. The Lead Developer or their delegate merges the `next_release` branch into the `current_version` branch
 3. The Scrum Team conducts a Sprint Retrospective meeting
