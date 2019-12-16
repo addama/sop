@@ -1,6 +1,6 @@
 # Development Standards of Practice {#top}
 
-Version 1.0.2
+Version 1.0.3
 
 # Purpose
 This document describes the software development process for Xtract Solutions as it pertains to the development team. The process described is based on Scrum, an Agile framework, and covers planning/storing Product Backlog Items, the work being done during Sprints, as well as the process for releasing stable iterations of the projects we work on. 
@@ -30,7 +30,7 @@ Product Backlog Item generation and refinement is an on-going process that is in
    2. Move Issues to the "Ready for Test" column when complete
    3. Assign "Ready for Test" Issues to Quality Assurance or impartial Developers for validation. Validation at this stage is a unit test to ensure that the changes made perform as expected by redressing the original Issue and determining if the problem has been solved or feature has been added as described. The process and results of this testing is recorded in the Issue with objective data captures, screenshots, and other output whenever possible
       * If Quality Assurance is not available to be assigned/self-assign "ready for Test" Issues, the Issue must be validated by a Developer that did not contribute code to the Issue, or the Developer who contributed the least to the Issue, or the Lead Developer, or the Director of Development as resources are available.
-   4. Move validated issues to the "Done" column
+   4. Move validated issues to the "Done" column, and close the Issue
    5. Move issues that failed validation back to the "To Do" column and reassign the original Development Team member. That Development Team member then resumes work as per the process described above
 
 ## Finish the Sprint {#sprint-finish}
