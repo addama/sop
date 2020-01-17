@@ -77,7 +77,7 @@ Any new Issues to be added, regardless of whether the Sprint is truncated or not
 
 # Special Dispensation for Side Effects {#side-effects}
 
-In the event that an issue, bug, or observation is created or discovered during the Sprint, and any release potentially made from that Sprint would not be complete or as functional as it could be, that Issue may be added directly to the current Sprint at the discretion of the Lead Developer, Product Owner, or both, based on timeline, workload, and need. 
+In the event that an issue, bug, or observation is created or discovered during the Sprint as a direct result of Sprint-related work, and any release potentially made from that Sprint would not be complete or as functional as it could be, that Issue may be added directly to the current Sprint at the discretion of the Lead Developer, Product Owner, or both, based on timeline, workload, and need. 
 
 # Expectation of Change {#expectation-of-change}
 The procedure described herein is an Agile process, and as such there is an expectation of change and adaptation. At any time during the process, better or different processes, tools, methods, etc, may be discovered and adopted by the Scrum Team at their discretion.
